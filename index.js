@@ -1,5 +1,7 @@
 const express = require("express");
 const cors = require("cors");
+const API_KEY = process.env.API_KEY;
+const DOMAIN = process.env.DOMAIN;
 const formData = require("form-data");
 const Mailgun = require("mailgun.js");
 require("dotenv").config();
