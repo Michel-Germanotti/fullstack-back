@@ -1,7 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const API_KEY = "b79b08236e3a246947a51fcd41889b2f-8845d1b1-1232a9d3";
-const DOMAIN = "sandbox3f46ae4927d44f788982ab8a4eab79ea.mailgun.org";
 const formData = require("form-data");
 const Mailgun = require("mailgun.js");
 require("dotenv").config();
@@ -37,6 +35,6 @@ app.post("/form", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("server is listening");
 });
